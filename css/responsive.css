@@ -1,0 +1,334 @@
+/* ============================================
+   DIAMOND IPTV — Responsive Styles
+   ============================================ */
+
+/* ── Large Desktop (≤ 1280px) ────────────── */
+@media (max-width: 1280px) {
+  :root {
+    --fs-5xl: 2.75rem;
+    --fs-4xl: 2.25rem;
+    --fs-3xl: 1.75rem;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  }
+}
+
+/* ── Tablet Landscape (≤ 1024px) ─────────── */
+@media (max-width: 1024px) {
+  :root {
+    --fs-5xl: 2.5rem;
+    --fs-4xl: 2rem;
+    --sp-5xl: 5rem;
+    --sp-4xl: 4rem;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--sp-2xl);
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+    padding-right: 0;
+    max-width: 500px;
+  }
+
+  /* Pricing grid */
+  .pricing__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Devices grid */
+  .devices__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Stats */
+  .stats__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Hero */
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__image {
+    display: none;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero__buttons {
+    justify-content: center;
+  }
+
+  .hero__features {
+    justify-content: center;
+  }
+
+  /* Testimonials */
+  .testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Blog */
+  .blog__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact */
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Installatie */
+  .install__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Tablet Portrait (≤ 768px) ───────────── */
+@media (max-width: 768px) {
+  :root {
+    --fs-5xl: 2rem;
+    --fs-4xl: 1.75rem;
+    --fs-3xl: 1.5rem;
+    --sp-5xl: 4rem;
+    --sp-4xl: 3rem;
+    --sp-3xl: 2.5rem;
+  }
+
+  /* Header Mobile */
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--color-bg-secondary);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: calc(var(--header-height) + var(--sp-xl)) var(--sp-xl) var(--sp-xl);
+    gap: 0;
+    transition: right var(--tr-base);
+    border-left: 1px solid var(--color-border);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .header__nav.active {
+    right: 0;
+  }
+
+  .header__link {
+    width: 100%;
+    padding: var(--sp-md) 0;
+    font-size: var(--fs-base);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header__link::after {
+    display: none;
+  }
+
+  .header__cta {
+    display: none;
+  }
+
+  .header__hamburger {
+    display: flex;
+  }
+
+  /* Grid adjustments */
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__trust-inner {
+    gap: var(--sp-lg);
+  }
+
+  .footer__bottom-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Pricing */
+  .pricing__grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  /* Stats */
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Devices */
+  .devices__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Features */
+  .features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonials */
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Blog */
+  .blog__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Why Choose cards */
+  .why__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Install tabs */
+  .install__tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Contact info */
+  .contact__info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CTA section */
+  .cta-banner__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--sp-lg);
+  }
+
+  /* Section */
+  .section {
+    padding: var(--sp-3xl) 0;
+  }
+
+  .section__header {
+    margin-bottom: var(--sp-2xl);
+  }
+}
+
+/* ── Mobile (≤ 576px) ────────────────────── */
+@media (max-width: 576px) {
+  :root {
+    --fs-5xl: 1.75rem;
+    --fs-4xl: 1.5rem;
+    --fs-3xl: 1.35rem;
+    --fs-2xl: 1.2rem;
+    --sp-5xl: 3rem;
+    --sp-4xl: 2.5rem;
+    --sp-3xl: 2rem;
+  }
+
+  .container {
+    padding: 0 var(--sp-md);
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-xl);
+  }
+
+  .footer__trust-inner {
+    flex-direction: column;
+    gap: var(--sp-md);
+  }
+
+  /* Stats */
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-md);
+  }
+
+  .stats__item {
+    padding: var(--sp-md);
+  }
+
+  /* Devices */
+  .devices__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact info cards */
+  .contact__info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Buttons */
+  .hero__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__buttons .btn {
+    width: 100%;
+  }
+
+  /* Pricing card */
+  .pricing__card {
+    padding: var(--sp-lg);
+  }
+
+  /* Blog filter tabs */
+  .blog__filters {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .blog__filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Section labels */
+  .section__label {
+    font-size: var(--fs-xs);
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+/* ── Small Mobile (≤ 400px) ──────────────── */
+@media (max-width: 400px) {
+  :root {
+    --fs-5xl: 1.5rem;
+    --fs-4xl: 1.3rem;
+  }
+
+  .header__logo-text {
+    font-size: var(--fs-sm);
+  }
+
+  .stats__grid {
+    grid-template-columns: 1fr;
+  }
+}
