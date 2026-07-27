@@ -517,11 +517,13 @@
 .pricing-card__features {
   list-style: none;
   padding: 0;
-  margin: 0 0 var(--sp-2xl) 0;
+  margin: 0 auto var(--sp-2xl) auto;
   display: flex;
   flex-direction: column;
   gap: var(--sp-sm);
   flex-grow: 1;
+  width: fit-content;
+  align-items: flex-start;
 }
 
 .pricing-card__feature {
