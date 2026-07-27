@@ -270,29 +270,8 @@
   .why__grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  .why__grid .card:nth-last-child(1),
-  .why__grid .card:nth-last-child(2) {
-    grid-column: span 1;
-  }
-  .why__grid {
-    justify-content: center;
-  }
-  .why__grid .card:nth-child(4) {
-    grid-column-start: 1;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 200%;
-  }
-  /* Just a simple flex fix for 5 items in 3 cols */
-  .why__grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .why__grid .card {
-    width: calc(33.333% - 1rem);
-  }
 }
+
 
 /* Devices Section */
 .devices__grid {
