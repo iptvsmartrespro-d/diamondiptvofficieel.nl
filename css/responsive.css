@@ -82,7 +82,7 @@
   }
 
   /* Blog */
-  .blog__grid {
+  .blog-preview__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -200,7 +200,7 @@
   }
 
   /* Blog */
-  .blog__grid {
+  .blog-preview__grid {
     grid-template-columns: 1fr;
   }
 
@@ -270,8 +270,12 @@
     gap: var(--sp-md);
   }
 
-  .stats__item {
+  .stat-item {
     padding: var(--sp-md);
+  }
+
+  .stat-item__value {
+    font-size: 1.75rem;
   }
 
   /* Devices */
@@ -297,6 +301,7 @@
   /* Pricing card */
   .pricing-card {
     padding: var(--sp-lg);
+    width: 100%;
   }
 
   /* Blog filter tabs */
