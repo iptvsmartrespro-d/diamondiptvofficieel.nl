@@ -453,24 +453,7 @@
   }
 }
 
-.testimonial-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 2rem;
-}
 
-.testimonial-card__stars {
-  display: flex;
-  gap: 0.25rem;
-  margin-bottom: 1rem;
-}
-
-.testimonial-card__stars svg {
-  width: 16px;
-  height: 16px;
-  color: #fbbf24;
-}
 
 .testimonial-card {
   background: var(--bg-card);
