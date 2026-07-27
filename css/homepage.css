@@ -124,105 +124,17 @@
 }
 
 /* Hero Visual */
-.hero__visual {
-  position: relative;
-  z-index: 1;
-  perspective: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero__visual-card {
+.hero__mockup-img {
   width: 100%;
-  max-width: 400px;
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--sp-xl);
-  box-shadow: var(--shadow-glow);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transform: rotateY(-10deg) rotateX(5deg);
+  max-width: 580px;
+  height: auto;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 50px rgba(232, 25, 44, 0.25));
   transition: transform var(--tr-base) ease;
+  z-index: 2;
 }
 
-.hero__visual-card:hover {
-  transform: rotateY(0deg) rotateX(0deg);
-}
-
-.hero__visual-header {
-  display: flex;
-  gap: var(--sp-xs);
-  margin-bottom: var(--sp-lg);
-}
-
-.hero__visual-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--color-border);
-}
-
-.hero__visual-dot:nth-child(1) { background: #ef4444; }
-.hero__visual-dot:nth-child(2) { background: #f59e0b; }
-.hero__visual-dot:nth-child(3) { background: #10b981; }
-
-.hero__visual-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--sp-lg);
-}
-
-.hero__visual-logo {
-  font-size: 3rem;
-  color: var(--color-accent);
-  text-shadow: 0 0 20px rgba(232, 25, 44, 0.5);
-  animation: pulseLogo 3s infinite ease-in-out;
-}
-
-@keyframes pulseLogo {
-  0%, 100% { transform: scale(1); text-shadow: 0 0 20px rgba(232, 25, 44, 0.5); }
-  50% { transform: scale(1.05); text-shadow: 0 0 30px rgba(232, 25, 44, 0.8); }
-}
-
-.hero__visual-float {
-  position: absolute;
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: var(--sp-sm) var(--sp-md);
-  display: flex;
-  align-items: center;
-  gap: var(--sp-sm);
-  font-size: 0.875rem;
-  font-weight: 600;
-  box-shadow: var(--shadow-md);
-  backdrop-filter: blur(8px);
-  z-index: 3;
-  animation: floatBadge 4s infinite ease-in-out;
-}
-
-.hero__visual-float i {
-  color: var(--color-accent);
-}
-
-.hero__visual-float--1 {
-  top: 10%;
-  left: -5%;
-  animation-delay: 0s;
-}
-
-.hero__visual-float--2 {
-  bottom: 15%;
-  right: -5%;
-  animation-delay: 2s;
-}
-
-@keyframes floatBadge {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+.hero__mockup-img:hover {
+  transform: translateY(-8px) scale(1.02);
 }
 
 
