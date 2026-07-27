@@ -293,8 +293,8 @@
 }
 
 .footer__payment-icon {
-  width: 44px;
-  height: 28px;
+  width: 52px;
+  height: 34px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
@@ -304,6 +304,25 @@
   font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
   color: var(--color-text-secondary);
+  overflow: hidden;
+  transition: all var(--tr-base);
+}
+
+.footer__payment-icon--branded {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.footer__payment-icon--branded svg {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-sm);
+}
+
+.footer__payment-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .footer__apps {
@@ -313,27 +332,48 @@
 }
 
 .footer__app-badge {
-  height: 36px;
+  height: 40px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   gap: var(--sp-xs);
-  padding: 0 var(--sp-md);
-  font-size: var(--fs-xs);
+  padding: 0 var(--sp-md) 0 var(--sp-sm);
   color: var(--color-text-secondary);
   transition: all var(--tr-base);
+  text-decoration: none;
 }
 
 .footer__app-badge:hover {
   border-color: var(--color-border-light);
   background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .footer__app-badge svg {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.footer__app-badge-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.footer__app-badge-text small {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+}
+
+.footer__app-badge-text strong {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
 }
 
 /* Footer Bottom */
