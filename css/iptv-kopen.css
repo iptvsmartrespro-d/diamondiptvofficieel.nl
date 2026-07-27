@@ -76,36 +76,16 @@
   align-items: center;
 }
 
-.kopen-hero__diamond {
-  width: 280px;
-  height: 280px;
-  background: linear-gradient(135deg, rgba(232,25,44,0.2) 0%, rgba(10,14,23,0) 100%);
-  border: 2px solid var(--accent, #e8192c);
-  transform: rotate(45deg);
-  border-radius: 20px;
-  position: relative;
-  box-shadow: 0 0 50px rgba(232, 25, 44, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.kopen-hero__mockup-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 50px rgba(232, 25, 44, 0.2));
+  transition: transform 0.3s ease;
 }
 
-.kopen-hero__diamond::before {
-  content: '';
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  border: 1px dashed var(--accent, #e8192c);
-  border-radius: 15px;
-}
-
-.kopen-hero__diamond::after {
-  content: 'DIAMOND';
-  transform: rotate(-45deg);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--accent, #e8192c);
-  letter-spacing: 4px;
+.kopen-hero__mockup-img:hover {
+  transform: translateY(-8px) scale(1.02);
 }
 
 /* Pricing Section */
