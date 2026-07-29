@@ -80,6 +80,7 @@
   width: 100%;
   max-width: 500px;
   height: auto;
+  mix-blend-mode: lighten;
   filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 50px rgba(232, 25, 44, 0.2));
   transition: transform 0.3s ease;
 }
