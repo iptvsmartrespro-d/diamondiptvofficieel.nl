@@ -38,6 +38,9 @@
         <li class="admin-nav-item active" data-tab="dashboard">
           <button><i class="fa-solid fa-chart-line"></i> <span>Dashboard</span></button>
         </li>
+        <li class="admin-nav-item" data-tab="content">
+          <button><i class="fa-solid fa-file-pen"></i> <span>Pagina's Bewerken</span></button>
+        </li>
         <li class="admin-nav-item" data-tab="pricing">
           <button><i class="fa-solid fa-tags"></i> <span>Prijzen Beheren</span></button>
         </li>
@@ -147,78 +150,168 @@
                 <td><strong>Homepage</strong></td>
                 <td>/index.html</td>
                 <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (24.000+ Zenders)</span></td>
-                <td><a href="index.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+                <td>
+                  <a href="index.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a>
+                  <button onclick="editPageFromTable('index.html')" class="admin-btn admin-btn-primary" style="padding:4px 10px;font-size:0.8rem;"><i class="fa-solid fa-pen"></i> Bewerken</button>
+                </td>
               </tr>
               <tr>
                 <td><strong>IPTV Kopen</strong></td>
                 <td>/iptv-kopen.html</td>
                 <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Prijstabel)</span></td>
-                <td><a href="iptv-kopen.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+                <td>
+                  <a href="iptv-kopen.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a>
+                  <button onclick="editPageFromTable('iptv-kopen.html')" class="admin-btn admin-btn-primary" style="padding:4px 10px;font-size:0.8rem;"><i class="fa-solid fa-pen"></i> Bewerken</button>
+                </td>
               </tr>
               <tr>
                 <td><strong>Installatie Handleiding</strong></td>
                 <td>/installatie.html</td>
                 <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Smart TV & Apps)</span></td>
-                <td><a href="installatie.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+                <td>
+                  <a href="installatie.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a>
+                  <button onclick="editPageFromTable('installatie.html')" class="admin-btn admin-btn-primary" style="padding:4px 10px;font-size:0.8rem;"><i class="fa-solid fa-pen"></i> Bewerken</button>
+                </td>
               </tr>
               <tr>
                 <td><strong>Blog Index</strong></td>
                 <td>/blog.html</td>
                 <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Artikelen Feed)</span></td>
-                <td><a href="blog.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+                <td>
+                  <a href="blog.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a>
+                  <button onclick="editPageFromTable('blog.html')" class="admin-btn admin-btn-primary" style="padding:4px 10px;font-size:0.8rem;"><i class="fa-solid fa-pen"></i> Bewerken</button>
+                </td>
               </tr>
               <tr>
                 <td><strong>Contact Pagina</strong></td>
                 <td>/contact.html</td>
                 <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Support Formulier)</span></td>
-                <td><a href="contact.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+                <td>
+                  <a href="contact.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a>
+                  <button onclick="editPageFromTable('contact.html')" class="admin-btn admin-btn-primary" style="padding:4px 10px;font-size:0.8rem;"><i class="fa-solid fa-pen"></i> Bewerken</button>
+                </td>
               </tr>
               <tr>
                 <td><strong>Blog: IPTV Kopen Nederland</strong></td>
                 <td>/blog-iptv-kopen.html</td>
                 <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (SEO Gids)</span></td>
-                <td><a href="blog-iptv-kopen.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+                <td>
+                  <a href="blog-iptv-kopen.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a>
+                  <button onclick="editPageFromTable('blog-iptv-kopen.html')" class="admin-btn admin-btn-primary" style="padding:4px 10px;font-size:0.8rem;"><i class="fa-solid fa-pen"></i> Bewerken</button>
+                </td>
               </tr>
               <tr>
                 <td><strong>Blog: Installeren op Samsung TV</strong></td>
                 <td>/blog-installatie-samsung.html</td>
                 <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Handleiding)</span></td>
-                <td><a href="blog-installatie-samsung.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+                <td>
+                  <a href="blog-installatie-samsung.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a>
+                  <button onclick="editPageFromTable('blog-installatie-samsung.html')" class="admin-btn admin-btn-primary" style="padding:4px 10px;font-size:0.8rem;"><i class="fa-solid fa-pen"></i> Bewerken</button>
+                </td>
               </tr>
               <tr>
                 <td><strong>Blog: De Beste IPTV Apps van 2026</strong></td>
                 <td>/blog-beste-iptv-apps.html</td>
                 <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Vergelijking)</span></td>
-                <td><a href="blog-beste-iptv-apps.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+                <td>
+                  <a href="blog-beste-iptv-apps.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a>
+                  <button onclick="editPageFromTable('blog-beste-iptv-apps.html')" class="admin-btn admin-btn-primary" style="padding:4px 10px;font-size:0.8rem;"><i class="fa-solid fa-pen"></i> Bewerken</button>
+                </td>
               </tr>
               <tr>
                 <td><strong>Blog: IPTV Abonnement Kiezen</strong></td>
                 <td>/blog-iptv-abonnement.html</td>
                 <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Pakketten Gids)</span></td>
-                <td><a href="blog-iptv-abonnement.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+                <td>
+                  <a href="blog-iptv-abonnement.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a>
+                  <button onclick="editPageFromTable('blog-iptv-abonnement.html')" class="admin-btn admin-btn-primary" style="padding:4px 10px;font-size:0.8rem;"><i class="fa-solid fa-pen"></i> Bewerken</button>
+                </td>
               </tr>
               <tr>
                 <td><strong>Blog: IPTV Smarters Pro Gids</strong></td>
                 <td>/blog-iptv-smarters-pro.html</td>
                 <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (App Gids)</span></td>
-                <td><a href="blog-iptv-smarters-pro.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+                <td>
+                  <a href="blog-iptv-smarters-pro.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a>
+                  <button onclick="editPageFromTable('blog-iptv-smarters-pro.html')" class="admin-btn admin-btn-primary" style="padding:4px 10px;font-size:0.8rem;"><i class="fa-solid fa-pen"></i> Bewerken</button>
+                </td>
               </tr>
               <tr>
                 <td><strong>Blog: Diamond IPTV Review</strong></td>
                 <td>/blog-iptv-review.html</td>
                 <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Review Article)</span></td>
-                <td><a href="blog-iptv-review.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+                <td>
+                  <a href="blog-iptv-review.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a>
+                  <button onclick="editPageFromTable('blog-iptv-review.html')" class="admin-btn admin-btn-primary" style="padding:4px 10px;font-size:0.8rem;"><i class="fa-solid fa-pen"></i> Bewerken</button>
+                </td>
               </tr>
               <tr>
                 <td><strong>Blog Artikel Template</strong></td>
                 <td>/blog-article.html</td>
                 <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Template)</span></td>
-                <td><a href="blog-article.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+                <td>
+                  <a href="blog-article.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a>
+                  <button onclick="editPageFromTable('blog-article.html')" class="admin-btn admin-btn-primary" style="padding:4px 10px;font-size:0.8rem;"><i class="fa-solid fa-pen"></i> Bewerken</button>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
 
+      </div>
+
+      <!-- TAB: PAGE CONTENT EDITOR -->
+      <div class="admin-tab-content" id="tab-content">
+        <div class="admin-card">
+          <div class="admin-card-title">
+            <span>Pagina Content & Teksten Bewerken</span>
+          </div>
+          <p style="color:var(--admin-text-muted);font-size:0.9rem;margin-bottom:20px;">
+            Selecteer hieronder een specifieke pagina om de titel, introductie-tekst, hero-titel en SEO omschrijving direct aan te passen.
+          </p>
+
+          <div class="admin-form-group">
+            <label for="select-edit-page">Selecteer te bewerken pagina</label>
+            <select id="select-edit-page" class="admin-select">
+              <option value="index.html">Homepage (/index.html)</option>
+              <option value="iptv-kopen.html">IPTV Kopen (/iptv-kopen.html)</option>
+              <option value="installatie.html">Installatie Handleiding (/installatie.html)</option>
+              <option value="blog.html">Blog Index (/blog.html)</option>
+              <option value="contact.html">Contact Pagina (/contact.html)</option>
+              <option value="blog-iptv-kopen.html">Blog: IPTV Kopen Nederland (/blog-iptv-kopen.html)</option>
+              <option value="blog-installatie-samsung.html">Blog: Installeren op Samsung TV (/blog-installatie-samsung.html)</option>
+              <option value="blog-beste-iptv-apps.html">Blog: De Beste IPTV Apps (/blog-beste-iptv-apps.html)</option>
+              <option value="blog-iptv-abonnement.html">Blog: IPTV Abonnement Kiezen (/blog-iptv-abonnement.html)</option>
+              <option value="blog-iptv-smarters-pro.html">Blog: IPTV Smarters Pro Gids (/blog-iptv-smarters-pro.html)</option>
+              <option value="blog-iptv-review.html">Blog: Diamond IPTV Review (/blog-iptv-review.html)</option>
+              <option value="blog-article.html">Blog Artikel Template (/blog-article.html)</option>
+            </select>
+          </div>
+
+          <div class="admin-form-group">
+            <label for="edit-page-title">Pagina Titel (SEO Title Tag)</label>
+            <input type="text" id="edit-page-title" class="admin-input" placeholder="Titel van de pagina...">
+          </div>
+
+          <div class="admin-form-group">
+            <label for="edit-page-h1">Hero Hoofdtitel (H1 Heading)</label>
+            <input type="text" id="edit-page-h1" class="admin-input" placeholder="Hoofdtitel op de pagina...">
+          </div>
+
+          <div class="admin-form-group">
+            <label for="edit-page-desc">Hero Introductietekst / Subtitel</label>
+            <textarea id="edit-page-desc" class="admin-textarea" placeholder="Introductie tekst van deze pagina..."></textarea>
+          </div>
+
+          <div class="admin-form-group">
+            <label for="edit-page-meta">Meta Omschrijving (SEO Description)</label>
+            <textarea id="edit-page-meta" class="admin-textarea" placeholder="Korte Google omschrijving..."></textarea>
+          </div>
+
+          <button id="admin-save-page-content" class="admin-btn admin-btn-primary">
+            <i class="fa-solid fa-floppy-disk"></i> Pagina Opslaan & Live Publiceren
+          </button>
+        </div>
       </div>
 
       <!-- TAB 2: PRICING MANAGER -->

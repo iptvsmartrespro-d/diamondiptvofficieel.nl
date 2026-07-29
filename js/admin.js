@@ -2,6 +2,18 @@
    DIAMOND IPTV — Admin Panel JavaScript
    ============================================ */
 
+// Global function for editing page directly from table
+window.editPageFromTable = function(pageUrl) {
+  const contentTabBtn = document.querySelector('[data-tab="content"]');
+  const selectPage = document.getElementById('select-edit-page');
+  
+  if (contentTabBtn) contentTabBtn.click();
+  if (selectPage) {
+    selectPage.value = pageUrl;
+    selectPage.dispatchEvent(new Event('change'));
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const PIN_KEY = 'diamond_admin_pin';
   const DEFAULT_PIN = '1234';
@@ -94,13 +106,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Handle Page Content Editor selection
+  const selectEditPage = document.getElementById('select-edit-page');
+  if (selectEditPage) {
+    selectEditPage.addEventListener('change', () => {
+      const pageUrl = selectEditPage.value;
+      const config = window.DiamondCMS ? window.DiamondCMS.getConfig() : {};
+      const pagesData = config.pages || {};
+      const pageData = pagesData[pageUrl] || {};
+
+      document.getElementById('edit-page-title').value = pageData.title || '';
+      document.getElementById('edit-page-h1').value = pageData.h1 || '';
+      document.getElementById('edit-page-desc').value = pageData.desc || '';
+      document.getElementById('edit-page-meta').value = pageData.meta || '';
+    });
+  }
+
+  // Save Specific Page Content
+  const savePageContentBtn = document.getElementById('admin-save-page-content');
+  if (savePageContentBtn) {
+    savePageContentBtn.addEventListener('click', () => {
+      const pageUrl = document.getElementById('select-edit-page').value;
+      const config = window.DiamondCMS ? window.DiamondCMS.getConfig() : {};
+      
+      if (!config.pages) config.pages = {};
+      
+      config.pages[pageUrl] = {
+        title: document.getElementById('edit-page-title').value,
+        h1: document.getElementById('edit-page-h1').value,
+        desc: document.getElementById('edit-page-desc').value,
+        meta: document.getElementById('edit-page-meta').value
+      };
+
+      if (window.DiamondCMS) {
+        window.DiamondCMS.saveConfig(config);
+      }
+
+      showToast(`Content voor ${pageUrl} opgeslagen & live gepubliceerd!`);
+    });
+  }
+
   // Save Forms to CMS
   const saveAllBtn = document.getElementById('admin-save-all');
   if (saveAllBtn) {
     saveAllBtn.addEventListener('click', () => {
       const currentConfig = window.DiamondCMS ? window.DiamondCMS.getConfig() : {};
 
-      const updatedConfig = {
+      const updatedConfig = Object.assign({}, currentConfig, {
         general: {
           siteName: "Diamond IPTV",
           whatsappNumber: document.getElementById('input-whatsapp') ? document.getElementById('input-whatsapp').value : currentConfig.general.whatsappNumber,
@@ -117,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
           homeTitle: document.getElementById('input-hometitle') ? document.getElementById('input-hometitle').value : "",
           homeMetaDesc: document.getElementById('input-homedesc') ? document.getElementById('input-homedesc').value : ""
         }
-      };
+      });
 
       if (window.DiamondCMS) {
         window.DiamondCMS.saveConfig(updatedConfig);

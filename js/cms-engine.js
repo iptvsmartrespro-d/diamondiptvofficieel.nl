@@ -20,7 +20,8 @@
     seo: {
       homeTitle: "Diamond IPTV | De Beste IPTV Service in Nederland - 24.000+ Zenders",
       homeMetaDesc: "Diamond IPTV biedt premium IPTV in Nederland ✓ 24.000+ live zenders ✓ 100.000+ VOD & Series ✓ 4K/8K kwaliteit ✓ 99.9% uptime ✓ 7 dagen geld terug. Bestel nu!"
-    }
+    },
+    pages: {}
   };
 
   function getActiveConfig() {
@@ -37,6 +38,7 @@
 
   function hydratePage() {
     const config = getActiveConfig();
+    const currentPagePath = window.location.pathname.split('/').pop() || 'index.html';
 
     // Hydrate Google Verification Meta Tag if missing/updated
     if (config.general.googleVerification) {
@@ -75,6 +77,27 @@
     if (config.pricing.plan24m) {
       const p24 = document.querySelectorAll('.pricing-card:nth-child(4) .pricing-card__amount');
       p24.forEach(el => el.textContent = config.pricing.plan24m.price);
+    }
+
+    // Hydrate Page-Specific Content (H1, Hero Desc, Title, Meta)
+    if (config.pages && config.pages[currentPagePath]) {
+      const pageData = config.pages[currentPagePath];
+      
+      if (pageData.title) {
+        document.title = pageData.title;
+      }
+      if (pageData.meta) {
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', pageData.meta);
+      }
+      if (pageData.h1) {
+        let h1 = document.querySelector('h1');
+        if (h1) h1.innerHTML = pageData.h1;
+      }
+      if (pageData.desc) {
+        let desc = document.querySelector('.hero__desc, .kopen-hero__desc, .install-hero__desc, .blog-hero__subtitle');
+        if (desc) desc.innerHTML = pageData.desc;
+      }
     }
   }
 
