@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond IPTV | Beheerderspanel (Admin Dashboard)</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/admin.css?v=1.3">
+</head>
+<body class="admin-body">
+
+  <!-- PIN Security Overlay -->
+  <div class="admin-login-overlay" id="admin-login-overlay">
+    <div class="admin-login-card">
+      <div class="admin-login-logo">
+        <i class="fa-solid fa-gem"></i>
+        <span>DIAMOND <strong>IPTV</strong> ADMIN</span>
+      </div>
+      <p style="color:var(--admin-text-muted);font-size:0.9rem;">Voer beheerders PIN-code in om in te loggen (Standaard: <strong>1234</strong>)</p>
+      <input type="password" id="admin-pin-input" class="admin-pin-input" placeholder="••••" maxlength="8">
+      <div id="admin-login-error" style="color:#ef4444;font-size:0.85rem;display:none;margin-bottom:15px;">Onjuiste PIN-code. Probeer opnieuw.</div>
+      <button id="admin-login-btn" class="admin-btn admin-btn-primary" style="width:100%;justify-center;">Inloggen op Dashboard</button>
+    </div>
+  </div>
+
+  <!-- Admin Main Dashboard Layout -->
+  <div class="admin-layout">
+    
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header">
+        <i class="fa-solid fa-gem fa-lg"></i>
+        <span>DIAMOND <strong>IPTV</strong></span>
+      </div>
+
+      <ul class="admin-nav">
+        <li class="admin-nav-item active" data-tab="dashboard">
+          <button><i class="fa-solid fa-chart-line"></i> <span>Dashboard</span></button>
+        </li>
+        <li class="admin-nav-item" data-tab="pricing">
+          <button><i class="fa-solid fa-tags"></i> <span>Prijzen Beheren</span></button>
+        </li>
+        <li class="admin-nav-item" data-tab="seo">
+          <button><i class="fa-solid fa-magnifying-glass"></i> <span>SEO & Verificatie</span></button>
+        </li>
+        <li class="admin-nav-item" data-tab="settings">
+          <button><i class="fa-solid fa-gear"></i> <span>Instellingen</span></button>
+        </li>
+      </ul>
+
+      <div class="admin-sidebar-footer">
+        <button id="admin-logout-btn" class="admin-btn admin-btn-danger" style="width:100%;">
+          <i class="fa-solid fa-right-from-bracket"></i> <span>Uitloggen</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      
+      <!-- Top Header -->
+      <header class="admin-header">
+        <div class="admin-header-title">
+          <h1>Website Beheerderspaneel</h1>
+          <p>Beheer al jouw website-instellingen, prijzen, SEO en Google verificatie op één plek.</p>
+        </div>
+        <div class="admin-header-actions">
+          <a href="index.html" target="_blank" class="admin-btn admin-btn-secondary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Bekijk Live Site
+          </a>
+          <button id="admin-save-all" class="admin-btn admin-btn-primary">
+            <i class="fa-solid fa-floppy-disk"></i> Opslaan & Live Publiceren
+          </button>
+        </div>
+      </header>
+
+      <!-- TAB 1: DASHBOARD OVERVIEW -->
+      <div class="admin-tab-content active" id="tab-dashboard">
+        
+        <!-- Stats Cards -->
+        <div class="admin-stats-grid">
+          <div class="admin-stat-card">
+            <div class="admin-stat-icon"><i class="fa-solid fa-signal"></i></div>
+            <div class="admin-stat-info">
+              <h4>Server Status</h4>
+              <div>99.9% Uptime</div>
+            </div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-icon"><i class="fa-solid fa-tv"></i></div>
+            <div class="admin-stat-info">
+              <h4>Live Zenders</h4>
+              <div>24.000+</div>
+            </div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-icon"><i class="fa-solid fa-film"></i></div>
+            <div class="admin-stat-info">
+              <h4>VOD & Series</h4>
+              <div>100.000+</div>
+            </div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="admin-stat-info">
+              <h4>Google Status</h4>
+              <div>Geverifieerd</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions Card -->
+        <div class="admin-card">
+          <div class="admin-card-title">
+            <span>Snelle Acties</span>
+          </div>
+          <div style="display:flex;gap:15px;flex-wrap:wrap;">
+            <button onclick="document.querySelector('[data-tab=pricing]').click();" class="admin-btn admin-btn-secondary">
+              <i class="fa-solid fa-pen-to-square"></i> Prijzen Aanpassen
+            </button>
+            <button onclick="document.querySelector('[data-tab=seo]').click();" class="admin-btn admin-btn-secondary">
+              <i class="fa-solid fa-search"></i> Google Verificatie Code Beheren
+            </button>
+            <button id="admin-export-json" class="admin-btn admin-btn-secondary">
+              <i class="fa-solid fa-download"></i> Backup Configuratie (JSON)
+            </button>
+          </div>
+        </div>
+
+        <!-- Active Pages Overview -->
+        <div class="admin-card">
+          <div class="admin-card-title">
+            <span>Actieve Website Pagina's (12 Pagina's Live)</span>
+          </div>
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Pagina Naam</th>
+                <th>URL</th>
+                <th>Status</th>
+                <th>Actie</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Homepage</strong></td>
+                <td>/index.html</td>
+                <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (24.000+ Zenders)</span></td>
+                <td><a href="index.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+              </tr>
+              <tr>
+                <td><strong>IPTV Kopen</strong></td>
+                <td>/iptv-kopen.html</td>
+                <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Prijstabel)</span></td>
+                <td><a href="iptv-kopen.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+              </tr>
+              <tr>
+                <td><strong>Installatie Handleiding</strong></td>
+                <td>/installatie.html</td>
+                <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Smart TV & Apps)</span></td>
+                <td><a href="installatie.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+              </tr>
+              <tr>
+                <td><strong>Blog Index</strong></td>
+                <td>/blog.html</td>
+                <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Artikelen Feed)</span></td>
+                <td><a href="blog.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+              </tr>
+              <tr>
+                <td><strong>Contact Pagina</strong></td>
+                <td>/contact.html</td>
+                <td><span style="color:#10b981;font-weight:600;"><i class="fa-solid fa-circle"></i> Live (Support Formulier)</span></td>
+                <td><a href="contact.html" target="_blank" class="admin-btn admin-btn-secondary" style="padding:4px 10px;font-size:0.8rem;">Open</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- TAB 2: PRICING MANAGER -->
+      <div class="admin-tab-content" id="tab-pricing">
+        <div class="admin-card">
+          <div class="admin-card-title">
+            <span>Abonnementsprijzen Beheren</span>
+          </div>
+          <p style="color:var(--admin-text-muted);font-size:0.9rem;margin-bottom:20px;">
+            Pas hieronder de live prijzen aan. Nadat je op 'Opslaan' klikt, worden deze automatisch bijgewerkt op de homepage en IPTV Kopen pagina.
+          </p>
+
+          <div class="admin-form-row">
+            <div class="admin-form-group">
+              <label for="price-1m">1 Maand Abonnement Prijs</label>
+              <input type="text" id="price-1m" class="admin-input" value="€15,99">
+            </div>
+            <div class="admin-form-group">
+              <label for="price-3m">3 Maanden Abonnement Prijs</label>
+              <input type="text" id="price-3m" class="admin-input" value="€29,99">
+            </div>
+          </div>
+
+          <div class="admin-form-row">
+            <div class="admin-form-group">
+              <label for="price-12m">12 Maanden Abonnement Prijs (Populair)</label>
+              <input type="text" id="price-12m" class="admin-input" value="€59,99">
+            </div>
+            <div class="admin-form-group">
+              <label for="price-24m">24 Maanden Abonnement Prijs</label>
+              <input type="text" id="price-24m" class="admin-input" value="€49,99">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: SEO & VERIFICATION -->
+      <div class="admin-tab-content" id="tab-seo">
+        <div class="admin-card">
+          <div class="admin-card-title">
+            <span>Google Search Console Verificatie & Meta Tags</span>
+          </div>
+
+          <div class="admin-form-group">
+            <label for="input-verification">Google Site Verification Code (meta content)</label>
+            <input type="text" id="input-verification" class="admin-input" value="vs5-Y_Gm8tMF5BSvLdS51FgQs3wSBYpBpK0BJIvl9MI">
+            <small style="color:var(--admin-text-muted);margin-top:6px;display:block;">De unieke code uit de Google Search Console meta tag HTML instelling.</small>
+          </div>
+
+          <div class="admin-form-group">
+            <label for="input-hometitle">Homepage Titel Tag (Title Tag)</label>
+            <input type="text" id="input-hometitle" class="admin-input" value="Diamond IPTV | De Beste IPTV Service in Nederland - 24.000+ Zenders">
+          </div>
+
+          <div class="admin-form-group">
+            <label for="input-homedesc">Homepage Meta Omschrijving (Meta Description)</label>
+            <textarea id="input-homedesc" class="admin-textarea">Diamond IPTV biedt premium IPTV in Nederland ✓ 24.000+ live zenders ✓ 100.000+ VOD & Series ✓ 4K/8K kwaliteit ✓ 99.9% uptime ✓ 7 dagen geld terug. Bestel nu!</textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: SETTINGS -->
+      <div class="admin-tab-content" id="tab-settings">
+        <div class="admin-card">
+          <div class="admin-card-title">
+            <span>Contact & WhatsApp Instellingen</span>
+          </div>
+
+          <div class="admin-form-group">
+            <label for="input-whatsapp">WhatsApp Nummer (internationaal formaat zonder +)</label>
+            <input type="text" id="input-whatsapp" class="admin-input" placeholder="31612345678" value="31612345678">
+          </div>
+
+          <div class="admin-form-group">
+            <label for="input-email">Klantenservice E-mailadres</label>
+            <input type="email" id="input-email" class="admin-input" value="support@diamondiptv.nl">
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="admin-toast" id="admin-toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="admin-toast-text">Wijzigingen opgeslagen!</span>
+  </div>
+
+  <script src="js/cms-engine.js?v=1.3"></script>
+  <script src="js/admin.js?v=1.3"></script>
+</body>
+</html>
