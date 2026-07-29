@@ -833,3 +833,107 @@
   color: var(--color-accent);
 }
 
+/* ──────────────────────────────────────────
+   SEO Comparison Table & Guide Section
+   ────────────────────────────────────────── */
+.comparison-table-wrapper {
+  overflow-x: auto;
+  margin-top: var(--sp-2xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  background: var(--color-bg-card);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 650px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9375rem;
+}
+
+.comparison-table th {
+  background: rgba(15, 23, 42, 0.8);
+  color: var(--color-text);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 1px;
+}
+
+.comparison-table th.highlight,
+.comparison-table td.highlight {
+  background: rgba(232, 25, 44, 0.08);
+  border-left: 1px solid rgba(232, 25, 44, 0.3);
+  border-right: 1px solid rgba(232, 25, 44, 0.3);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.comparison-table th.highlight {
+  color: var(--color-accent);
+  font-size: 0.9375rem;
+}
+
+.comparison-table td i.fa-check {
+  color: #10b981;
+}
+
+.comparison-table td i.fa-xmark {
+  color: #ef4444;
+  opacity: 0.6;
+}
+
+.seo-guide__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-xl);
+  margin-top: var(--sp-2xl);
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .seo-guide__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.seo-guide__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-xl);
+}
+
+.seo-guide__card h3 {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: var(--sp-md);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
+}
+
+.seo-guide__card h3 i {
+  color: var(--color-accent);
+}
+
+.seo-guide__card p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  font-size: 0.9375rem;
+  margin-bottom: var(--sp-md);
+}
+
+.seo-guide__card p:last-child {
+  margin-bottom: 0;
+}
+
+
