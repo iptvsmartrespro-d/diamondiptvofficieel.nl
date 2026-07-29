@@ -179,6 +179,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Save Custom PIN
+  const savePinBtn = document.getElementById('btn-save-new-pin');
+  if (savePinBtn) {
+    savePinBtn.addEventListener('click', () => {
+      const newPin = document.getElementById('input-new-pin').value;
+      const confirmPin = document.getElementById('input-confirm-pin').value;
+
+      if (!newPin || newPin.length < 4) {
+        showToast('PIN-code moet minstens 4 tekens bevatten!');
+        return;
+      }
+      if (newPin !== confirmPin) {
+        showToast('PIN-codes komen niet overeen!');
+        return;
+      }
+
+      localStorage.setItem(PIN_KEY, newPin);
+      document.getElementById('input-new-pin').value = '';
+      document.getElementById('input-confirm-pin').value = '';
+      showToast('Beheerders PIN-code succesvol gewijzigd!');
+    });
+  }
+
   // Export JSON Config
   const exportBtn = document.getElementById('admin-export-json');
   if (exportBtn) {
