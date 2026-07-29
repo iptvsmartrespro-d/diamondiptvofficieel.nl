@@ -761,3 +761,75 @@
 .cta-banner__stats i {
   color: var(--color-accent);
 }
+
+/* ──────────────────────────────────────────
+   Expanded Devices & Compatibility Layout
+   ────────────────────────────────────────── */
+.devices__intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-xl);
+  margin-bottom: var(--sp-2xl);
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .devices__intro-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.devices__info-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-xl);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--tr-base);
+}
+
+.devices__info-card:hover {
+  border-color: var(--color-accent);
+}
+
+.devices__info-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: var(--sp-md);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
+}
+
+.devices__info-card h3 i {
+  color: var(--color-accent);
+}
+
+.devices__info-card p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-size: 0.9375rem;
+  margin-bottom: var(--sp-lg);
+}
+
+.devices__feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xs);
+}
+
+.devices__feature-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-xs);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.devices__feature-list li i {
+  color: var(--color-accent);
+}
+
