@@ -111,6 +111,42 @@
     resetConfig: function () {
       localStorage.removeItem('diamond_iptv_admin_config');
       hydratePage();
+    },
+    generateSitemapXML: function () {
+      const domain = 'https://www.diamondiptvofficieel.nl';
+      const today = new Date().toISOString().split('T')[0];
+      const defaultPages = [
+        { url: '', priority: '1.0', freq: 'daily' },
+        { url: 'iptv-kopen.html', priority: '0.9', freq: 'weekly' },
+        { url: 'installatie.html', priority: '0.9', freq: 'weekly' },
+        { url: 'blog.html', priority: '0.8', freq: 'daily' },
+        { url: 'contact.html', priority: '0.7', freq: 'monthly' },
+        { url: 'blog-iptv-kopen.html', priority: '0.8', freq: 'weekly' },
+        { url: 'blog-installatie-samsung.html', priority: '0.8', freq: 'weekly' },
+        { url: 'blog-beste-iptv-apps.html', priority: '0.8', freq: 'weekly' },
+        { url: 'blog-iptv-abonnement.html', priority: '0.8', freq: 'weekly' },
+        { url: 'blog-iptv-smarters-pro.html', priority: '0.8', freq: 'weekly' },
+        { url: 'blog-iptv-review.html', priority: '0.8', freq: 'weekly' },
+        { url: 'blog-article.html', priority: '0.6', freq: 'monthly' }
+      ];
+
+      const config = getActiveConfig();
+      if (config.pages) {
+        Object.keys(config.pages).forEach(pageKey => {
+          if (!defaultPages.some(p => p.url === pageKey)) {
+            defaultPages.push({ url: pageKey, priority: '0.8', freq: 'weekly' });
+          }
+        });
+      }
+
+      const entries = defaultPages.map(p => `  <url>
+    <loc>${domain}/${p.url}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${p.freq}</changefreq>
+    <priority>${p.priority}</priority>
+  </url>`).join('\n');
+
+      return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>`;
     }
   };
 

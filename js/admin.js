@@ -218,6 +218,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Download Updated Sitemap XML
+  const downloadSitemapBtn = document.getElementById('admin-download-sitemap');
+  if (downloadSitemapBtn) {
+    downloadSitemapBtn.addEventListener('click', () => {
+      if (window.DiamondCMS && window.DiamondCMS.generateSitemapXML) {
+        const xml = window.DiamondCMS.generateSitemapXML();
+        const dataStr = "data:text/xml;charset=utf-8," + encodeURIComponent(xml);
+        const a = document.createElement('a');
+        a.setAttribute("href", dataStr);
+        a.setAttribute("download", "sitemap.xml");
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        showToast('Geüpdatete sitemap.xml succesvol gedownload!');
+      }
+    });
+  }
+
+  // Ping Google Search Console
+  const pingGoogleBtn = document.getElementById('admin-ping-google');
+  if (pingGoogleBtn) {
+    pingGoogleBtn.addEventListener('click', () => {
+      const pingUrl = 'https://www.google.com/ping?sitemap=https://www.diamondiptvofficieel.nl/sitemap.xml';
+      window.open(pingUrl, '_blank');
+      showToast('Google Search Console op de hoogte gesteld (Ping verzonden)!');
+    });
+  }
+
   // Toast Helper
   function showToast(message) {
     const toast = document.getElementById('admin-toast');
