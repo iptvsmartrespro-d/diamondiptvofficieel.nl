@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://www.diamondiptvofficieel.nl/blog.html</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -85,6 +85,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.diamondiptvofficieel.nl/iptv-geen-geluid.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.diamondiptvofficieel.nl/iptv-kopen.html</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -99,6 +105,12 @@
   <url>
     <loc>https://www.diamondiptvofficieel.nl/mbps-voor-iptv.html</loc>
     <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.diamondiptvofficieel.nl/tivimate-instellen.html</loc>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
