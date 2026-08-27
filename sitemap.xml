@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://www.diamondiptvofficieel.nl/blog.html</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -53,6 +53,12 @@
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.diamondiptvofficieel.nl/duplexplay-iptv.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.diamondiptvofficieel.nl/exoplayer-vs-vlc.html</loc>
@@ -93,6 +99,12 @@
   <url>
     <loc>https://www.diamondiptvofficieel.nl/iptv-dataverbruik.html</loc>
     <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.diamondiptvofficieel.nl/iptv-formuler.html</loc>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
