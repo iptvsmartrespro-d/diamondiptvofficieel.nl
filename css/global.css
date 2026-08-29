@@ -2,8 +2,15 @@
    DIAMOND IPTV — Global Design System
    ============================================ */
 
-/* Google Fonts — Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+/* Font Display Swap for Webfonts */
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-display: swap;
+}
 
 /* ──────────────────────────────────────────
    CSS Custom Properties

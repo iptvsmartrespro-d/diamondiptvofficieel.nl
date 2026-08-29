@@ -5,9 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diamond IPTV | Beheerderspanel (Admin Dashboard)</title>
   <meta name="robots" content="noindex, nofollow">
+  <!-- Preconnect to CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google Fonts Inter -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+  <!-- Font Awesome Non-Blocking -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
   <link rel="stylesheet" href="css/admin.css?v=1.3">
 </head>
 <body class="admin-body">
@@ -650,7 +660,7 @@
     <span id="admin-toast-text">Wijzigingen opgeslagen!</span>
   </div>
 
-  <script src="js/cms-engine.js?v=1.3"></script>
+  <script src="js/cms-engine.js?v=1.3" defer></script>
   <script src="js/admin.js?v=1.3"></script>
 </body>
 </html>
