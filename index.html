@@ -14,7 +14,6 @@
   <meta property="og:url" content="https://www.diamond-iptv.nl/">
   
   <link rel="canonical" href="https://www.diamond-iptv.nl/">
-  <noscript></noscript>
 
   <script type="application/ld+json">
   [
@@ -74,112 +73,26 @@
     }
   ]
   </script>
+
   
 
-  <!-- Preconnect to external origins -->
+  <!-- Preconnect to CDNs -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-<style>
-/* Critical CSS — inlined for instant FCP/LCP */
-:root{--color-bg-primary:#0a0e17;--color-bg-secondary:#121829;--color-bg-card:#1a1f35;--color-border:#1e2540;--color-border-light:#2a3050;--color-accent:#e8192c;--color-accent-hover:#ff2d42;--color-accent-glow:rgba(232,25,44,0.35);--color-text:#fff;--color-text-secondary:#b0b8c9;--color-text-muted:#6b7280;--font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;--fs-sm:0.875rem;--fs-base:1rem;--fs-lg:1.125rem;--fs-xl:1.25rem;--fs-2xl:1.5rem;--fs-3xl:2rem;--fs-5xl:3.25rem;--fw-medium:500;--fw-semibold:600;--fw-bold:700;--fw-extrabold:800;--sp-sm:0.5rem;--sp-md:1rem;--sp-lg:1.5rem;--sp-xl:2rem;--sp-2xl:3rem;--radius-md:10px;--radius-lg:16px;--radius-full:9999px;--shadow-glow:0 0 20px var(--color-accent-glow);--tr-fast:0.15s ease;--tr-base:0.3s cubic-bezier(0.4,0,0.2,1);--header-height:72px;--max-width:1200px}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:var(--header-height)}
-body{font-family:var(--font-family);font-size:var(--fs-base);line-height:1.6;color:var(--color-text);background-color:var(--color-bg-primary);overflow-x:hidden;min-height:100vh}
-img,video{max-width:100%;height:auto;display:block}
-a{color:inherit;text-decoration:none}
-ul,ol{list-style:none}
-button{cursor:pointer;font-family:inherit;border:none;outline:none;background:none}
-h1,h2,h3{line-height:1.2;font-weight:var(--fw-bold);color:var(--color-text)}
-h1{font-size:var(--fs-5xl);font-weight:var(--fw-extrabold)}
-p{color:var(--color-text-secondary);line-height:1.7}
-.container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 var(--sp-xl)}
-.header{position:fixed;top:0;left:0;right:0;height:var(--header-height);z-index:1000;border-bottom:1px solid transparent;transition:all var(--tr-base)}
-.header.scrolled{background:rgba(10,14,23,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom-color:var(--color-border);box-shadow:0 4px 30px rgba(0,0,0,0.3)}
-.header__inner{display:flex;align-items:center;justify-content:space-between;height:100%}
-.header__logo{display:flex;align-items:center;gap:var(--sp-sm);font-size:var(--fs-lg);font-weight:var(--fw-bold);color:var(--color-text);z-index:1001;text-decoration:none}
-.header__logo-icon{width:40px;height:40px}
-.header__logo-icon svg{width:100%;height:100%}
-.header__logo-text{font-weight:var(--fw-medium);letter-spacing:0.02em}
-.header__logo-text strong{font-weight:var(--fw-extrabold)}
-.header__nav{display:flex;align-items:center;gap:var(--sp-xl)}
-.header__link{font-size:var(--fs-sm);font-weight:var(--fw-medium);color:var(--color-text-secondary);position:relative;padding:var(--sp-sm) 0}
-.header__link.active{color:var(--color-text)}
-.header__cta{padding:0.6rem 1.4rem;font-size:var(--fs-sm)}
-.header__hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px;cursor:pointer;z-index:1001}
-.header__hamburger span{display:block;width:100%;height:2px;background:var(--color-text);border-radius:2px;transition:all var(--tr-base)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-sm);padding:0.8rem 1.75rem;font-size:var(--fs-sm);font-weight:var(--fw-semibold);border-radius:var(--radius-md);transition:all var(--tr-base);white-space:nowrap;position:relative;overflow:hidden}
-.btn svg{width:18px;height:18px;flex-shrink:0}
-.btn--primary{background:var(--color-accent);color:#fff;box-shadow:var(--shadow-glow)}
-.btn--outline{background:transparent;color:var(--color-text);border:1px solid var(--color-border-light)}
-.btn--lg{padding:1rem 2.25rem;font-size:var(--fs-base);border-radius:var(--radius-lg)}
-.badge{display:inline-flex;align-items:center;gap:4px;padding:0.25rem 0.75rem;font-size:0.75rem;font-weight:var(--fw-semibold);border-radius:var(--radius-full);text-transform:uppercase;letter-spacing:0.04em}
-.badge--outline{background:transparent;border:1px solid var(--color-accent);color:var(--color-accent)}
-.badge--accent{background:var(--color-accent);color:#fff}
-.gradient-text{background:linear-gradient(135deg,var(--color-accent),#ff6b7a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero{padding-top:120px;padding-bottom:80px;background:radial-gradient(circle at top center,rgba(232,25,44,0.08) 0%,transparent 60%);position:relative;overflow:hidden}
-.hero__inner{display:grid;grid-template-columns:1fr;gap:var(--sp-2xl);align-items:center}
-@media(min-width:992px){.hero__inner{grid-template-columns:1.2fr 0.8fr}}
-.hero__content{display:flex;flex-direction:column;gap:var(--sp-lg);z-index:2}
-.hero__desc{font-size:1.125rem;color:var(--color-text-secondary);line-height:1.6;max-width:600px}
-.hero__features{display:flex;flex-direction:column;gap:var(--sp-sm);margin-bottom:var(--sp-md)}
-@media(min-width:768px){.hero__features{flex-direction:row;flex-wrap:wrap;gap:var(--sp-lg)}}
-.hero__feature{display:flex;align-items:center;gap:var(--sp-sm);font-size:1rem;font-weight:500;color:var(--color-text)}
-.hero__feature i{color:#10b981;font-size:1.125rem}
-.hero__actions{display:flex;flex-direction:column;gap:var(--sp-md)}
-@media(min-width:576px){.hero__actions{flex-direction:row;align-items:center}}
-.hero__rating{display:flex;align-items:center;gap:var(--sp-sm);margin-top:var(--sp-md)}
-.hero__stars{display:flex;gap:2px;color:#fbbf24;text-shadow:0 0 10px rgba(251,191,36,0.3)}
-.hero__mockup-img{width:100%;max-width:580px;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.7));z-index:2}
-.bg-pattern{position:relative}
-.bg-pattern::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse 600px 400px at 20% 50%,rgba(232,25,44,0.06),transparent),radial-gradient(ellipse 500px 300px at 80% 20%,rgba(30,40,80,0.4),transparent);pointer-events:none;z-index:0}
-.bg-pattern>*{position:relative;z-index:1}
-.mobile-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:998;opacity:0}
-.text-accent{color:var(--color-accent)}
-.text-muted{color:var(--color-text-muted)}
-.text-center{text-align:center}
-.text-secondary{color:var(--color-text-secondary)}
-/* Hero reveal: visible immediately for LCP */
-.hero .reveal,.hero .reveal-right{opacity:1!important;transform:none!important}
-/* Below-fold reveal: hidden until JS triggers */
-.reveal:not(.revealed){opacity:0;transform:translateY(30px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
-.reveal-right:not(.revealed){opacity:0;transform:translateX(30px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
-.reveal-left:not(.revealed){opacity:0;transform:translateX(-30px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
-.reveal.revealed,.reveal-left.revealed,.reveal-right.revealed{opacity:1;transform:none}
-/* Breadcrumbs */
-.breadcrumbs{display:flex;align-items:center;gap:var(--sp-sm);font-size:var(--fs-sm);color:var(--color-text-muted);margin-bottom:var(--sp-xl);flex-wrap:wrap;padding-top:calc(var(--header-height) + 2rem)}
-.breadcrumbs a{color:var(--color-text-secondary)}
-.breadcrumbs svg{width:14px;height:14px;stroke:var(--color-text-muted)}
-/* Article header */
-.article-layout{display:grid;grid-template-columns:1fr;gap:var(--sp-2xl);padding-top:var(--sp-xl)}
-@media(min-width:992px){.article-layout{grid-template-columns:1fr 320px}}
-.article-header{margin-bottom:var(--sp-2xl)}
-.article-header__title{font-size:var(--fs-3xl);margin:var(--sp-md) 0}
-.article-header__meta{display:flex;flex-wrap:wrap;gap:var(--sp-sm);font-size:var(--fs-sm)}
-.article-header__image{margin-top:var(--sp-xl);border-radius:var(--radius-lg);overflow:hidden}
-.section{padding:5rem 0;position:relative}
-.section--alt{background-color:var(--color-bg-secondary)}
-@media(max-width:991px){.header__nav{display:none}.header__hamburger{display:flex}.article-layout{grid-template-columns:1fr}}
-@media(max-width:767px){h1{font-size:2rem}.hero{padding-top:100px;padding-bottom:40px}.grid-3{grid-template-columns:1fr}}
-</style>
+  <!-- Google Fonts Inter -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 
-  <!-- Critical CSS is inlined above. Full stylesheets load asynchronously below -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+  <!-- Font Awesome (Async/Preload) -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
-  <link rel="preload" href="css/global.css?v=1.4" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="css/header-footer.css?v=1.4" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="css/homepage.css?v=1.4" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="css/responsive.css?v=1.4" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/global.css?v=1.4">
-    <link rel="stylesheet" href="css/header-footer.css?v=1.4">
-    <link rel="stylesheet" href="css/homepage.css?v=1.4">
-    <link rel="stylesheet" href="css/responsive.css?v=1.4">
-  </noscript>
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
+  <!-- Site Stylesheets (Synchronous for Zero CLS) -->
+  <link rel="stylesheet" href="css/global.css?v=1.5">
+  <link rel="stylesheet" href="css/header-footer.css?v=1.5">
+  <link rel="stylesheet" href="css/homepage.css?v=1.5">
+  <link rel="stylesheet" href="css/responsive.css?v=1.5">
   <link rel="preload" as="image" href="images/hero-devices.webp" type="image/webp" fetchpriority="high">
 </head>
 <body>
