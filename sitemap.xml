@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://www.diamondiptvofficieel.nl/blog.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -67,8 +67,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.diamondiptvofficieel.nl/flix-iptv.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.diamondiptvofficieel.nl/hoe-werkt-iptv.html</loc>
     <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.diamondiptvofficieel.nl/ibo-player-vs-smart-iptv.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
