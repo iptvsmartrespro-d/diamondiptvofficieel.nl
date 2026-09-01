@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.diamondiptvofficieel.nl/blog.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -157,6 +157,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.diamondiptvofficieel.nl/tivimate-vs-iptv-smarters.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.diamondiptvofficieel.nl/wat-heb-je-nodig-voor-iptv.html</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -165,6 +171,12 @@
   <url>
     <loc>https://www.diamondiptvofficieel.nl/wat-is-iptv.html</loc>
     <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.diamondiptvofficieel.nl/xciptv-installeren.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
