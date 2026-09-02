@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="vs5-Y_Gm8tMF5BSvLdS51FgQs3wSBYpBpK0BJIvl9MI" />
+  <title>Hardware Decoding versus Software Decoding bij IPTV (2026)</title>
+  <meta name="description" content="Hardware decoding vs software decoding bij IPTV uitgelegd. Ontdek wat het beste is voor 4K HDR streams, 60FPS sport, zapsnelheid en het voorkomen van haperingen.">
+  <meta name="keywords" content="hardware decoding IPTV, software decoding IPTV, HW vs SW decoding, HW+, ExoPlayer decoder, IPTV buffering oplossen, Diamond IPTV">
+  <link rel="canonical" href="https://www.diamondiptvofficieel.nl/hardware-decoding-iptv">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Hardware Decoding versus Software Decoding bij IPTV (2026)">
+  <meta property="og:description" content="Wat is het verschil tussen HW en SW decoding bij IPTV streaming? Een technische gids voor de beste beeldkwaliteit en vloeiende 4K video.">
+  <meta property="og:image" content="https://www.diamondiptvofficieel.nl/images/blog-hardware-decoding-iptv.webp">
+  <meta property="og:url" content="https://www.diamondiptvofficieel.nl/hardware-decoding-iptv">
+
+  <!-- Preconnect to CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- Google Fonts Inter -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+  <!-- Font Awesome (Async/Preload) -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+  <!-- Site Stylesheets (Synchronous for Zero CLS) -->
+  <link rel="stylesheet" href="css/global.css?v=1.5">
+  <link rel="stylesheet" href="css/header-footer.css?v=1.5">
+  <link rel="stylesheet" href="css/blog.css?v=1.5">
+  <link rel="stylesheet" href="css/responsive.css?v=1.5">
+  <link rel="preload" as="image" href="images/blog-hardware-decoding-iptv.webp" type="image/webp" fetchpriority="high">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Hardware Decoding versus Software Decoding bij IPTV (2026)",
+    "description": "Een diepgaande analyse van hardware decoding vs software decoding bij IPTV, inclusief GPU-versnelling, H.265/HEVC-codecs en spelerinstellingen.",
+    "author": {
+      "@type": "Organization",
+      "name": "Diamond IPTV"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Diamond IPTV",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.diamondiptvofficieel.nl/images/logo.png"
+      }
+    },
+    "datePublished": "2026-09-02",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.diamondiptvofficieel.nl/hardware-decoding-iptv"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Diamond IPTV Home">
+        <div class="header__logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 2L37 14V28L20 38L3 28V14L20 2Z" fill="#e8192c" opacity="0.9"/>
+            <path d="M20 6L33 15V27L20 34L7 27V15L20 6Z" fill="#0a0e17"/>
+            <path d="M20 10L28 15.5V24.5L20 30L12 24.5V15.5L20 10Z" fill="#e8192c" opacity="0.6"/>
+            <path d="M20 14L24 16.5V21.5L20 24L16 21.5V16.5L20 14Z" fill="#e8192c"/>
+          </svg>
+        </div>
+        <span class="header__logo-text">DIAMOND <strong>IPTV</strong></span>
+      </a>
+      <nav class="header__nav" id="main-nav">
+        <a href="index.html" class="header__link">Home</a>
+        <a href="iptv-kopen.html" class="header__link">IPTV Kopen</a>
+        <a href="installatie.html" class="header__link">Installatie</a>
+        <a href="blog.html" class="header__link active">Blog</a>
+        <a href="contact.html" class="header__link">Contact</a>
+      </nav>
+      <a href="iptv-kopen.html" class="btn btn--primary header__cta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        IPTV Kopen
+      </a>
+      <button class="header__hamburger" id="nav-toggle" aria-label="Menu openen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <main>
+    <div class="article-layout container section">
+      <div class="article-layout__main">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          <a href="blog.html">Blog</a>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          <span>Hardware Decoding IPTV</span>
+        </nav>
+
+        <!-- Article Header -->
+        <header class="article-header reveal">
+          <span class="badge badge--accent mb-sm">Techniek &amp; Prestaties</span>
+          <h1 class="article-header__title">Hardware decoding versus software decoding bij IPTV: wat is het verschil? (2026)</h1>
+          <div class="article-header__meta text-muted">
+            <span>2 September 2026</span>
+            <span class="divider-dot">•</span>
+            <span>Door Diamond IPTV Redactie</span>
+            <span class="divider-dot">•</span>
+            <span>13 min leestijd</span>
+          </div>
+          <div class="article-header__image" style="background:none;padding:0;height:auto;display:flex;align-items:center;justify-content:center;">
+            <img src="images/blog-hardware-decoding-iptv.webp" alt="Hardware decoding versus software decoding bij IPTV" width="600" height="450" fetchpriority="high" decoding="async" style="width:100%;max-height:400px;object-fit:contain;border-radius:12px;">
+          </div>
+        </header>
+
+        <!-- Article Content -->
+        <article class="article__content reveal reveal-delay-1">
+
+          <h2>Inleiding: Het geheim achter vloeiende 4K videostreams</h2>
+          <p>Heb je tijdens het instellen van jouw favoriete IPTV app (zoals TiviMate, XCIPTV, VLC of IPTV Smarters) wel eens de instelling **Hardware Decoding (HW)**, **HW+** of **Software Decoding (SW)** voorbij zien komen? Veel gebruikers laten deze optie op standaard staan, zonder te weten dat deze enkele instelling het verschil kan maken tussen een schokkerige tv-stream die oververhit raakt en een vlijmscherpe 4K 60FPS uitzending die in een fractie van een seconde laadt.</p>
+          <p>In dit artikel duiken we in de wereld van <strong>hardware decoding IPTV</strong>. We leggen uit hoe de videoprocessor van jouw Smart TV, Firestick of mediaspeler samenwerkt met de hoogwaardige streams van <a href="index.html" class="text-accent">Diamond IPTV</a>, wat de exacte verschillen zijn met software decoding en welke instelling jij moet kiezen voor de beste resultaten.</p>
+
+          <h2>Wat is Video Decoding precies?</h2>
+          <p>Wanneer een live televisiezender of VOD-film over het internet gestreamd wordt, is het videobestand zwaar gecomprimeerd met een videocodec (zoals H.264/AVC, H.265/HEVC of AV1). Jouw televisie of Android box ontvangt miljoenen ingepakte databits en moet deze in real-time "uitpakken" om 50 tot 60 beelden per seconde op het scherm te toveren. Dit uitpakproces noemen we **decoding**.</p>
+
+          <p>Er zijn twee verschillende manieren waarop jouw apparaat dit kan uitvoeren:</p>
+
+          <ul>
+            <li><strong>Hardware Decoding (HW / HW+):</strong> De videostroom wordt rechtstreeks verwerkt door een speciaal daarvoor gebouwde fysieke chip in jouw tv of streamingbox (de GPU / Dedicated Video Decoder).</li>
+            <li><strong>Software Decoding (SW):</strong> De videostroom wordt verwerkt door de algemene rekenprocessor (de CPU) door middel van softwareberekeningen.</li>
+          </ul>
+
+          <p>Lees voor algemene basiskennis over internettelevisie ook onze gids <a href="wat-is-iptv.html" class="text-accent">Wat is IPTV en hoe werkt het?</a>.</p>
+
+          <h2>Vergelijking: Hardware Decoding (HW) vs Software Decoding (SW)</h2>
+
+          <table style="width:100%;border-collapse:collapse;margin:25px 0;background:var(--color-bg-card);border-radius:8px;overflow:hidden;">
+            <thead>
+              <tr style="background:rgba(232,25,44,0.15);border-bottom:1px solid var(--color-border);">
+                <th style="padding:12px 15px;text-align:left;color:var(--color-text);">Kenmerk</th>
+                <th style="padding:12px 15px;text-align:left;color:var(--color-text);">Hardware Decoding (HW / HW+)</th>
+                <th style="padding:12px 15px;text-align:left;color:var(--color-text);">Software Decoding (SW)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--color-border-light);">
+                <td style="padding:12px 15px;color:var(--color-text-secondary);">Processor Belasting (CPU)</td>
+                <td style="padding:12px 15px;color:#10b981;font-weight:600;">Zeer Laag (5% - 15%)</td>
+                <td style="padding:12px 15px;color:var(--color-accent);">Zeer Hoog (70% - 100%)</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--color-border-light);">
+                <td style="padding:12px 15px;color:var(--color-text-secondary);">Energieverbruik &amp; Warmte</td>
+                <td style="padding:12px 15px;color:#10b981;font-weight:600;">Minimaal (TV blijft koel)</td>
+                <td style="padding:12px 15px;color:var(--color-accent);">Hoog (Risico op oververhitting)</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--color-border-light);">
+                <td style="padding:12px 15px;color:var(--color-text-secondary);">4K Ultra HD &amp; 60FPS Support</td>
+                <td style="padding:12px 15px;color:#10b981;font-weight:600;">Vloeiend &amp; Haspelvrij</td>
+                <td style="padding:12px 15px;color:var(--color-accent);">Schokkerig bij zware bitrates</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--color-border-light);">
+                <td style="padding:12px 15px;color:var(--color-text-secondary);">Compatibiliteit met Zeldzame Codecs</td>
+                <td style="padding:12px 15px;color:var(--color-text-secondary);">Afhankelijk van de fysieke chip</td>
+                <td style="padding:12px 15px;color:#10b981;font-weight:600;">Speelt vrijwel ELK formaat af</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 15px;color:var(--color-text-secondary);">Zapsnelheid (Schakeltijd)</td>
+                <td style="padding:12px 15px;color:#10b981;font-weight:600;">Super Snel (&lt; 0.5 sec)</td>
+                <td style="padding:12px 15px;color:var(--color-text-secondary);">Trager (1.5 - 3.0 sec)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>Wanneer gebruik je Hardware Decoding (HW)?</h2>
+          <p>In 95% van de gevallen wil je dat jouw IPTV speler staat ingesteld op **Hardware Decoding (HW of HW+)**. Waarom?</p>
+          <ol>
+            <li><strong>Optimale Prestaties bij 4K HDR:</strong> Fysieke videochips in apparaten zoals de <a href="iptv-nvidia-shield.html" class="text-accent">NVIDIA Shield Pro</a>, Apple TV 4K en moderne Smart TV's zijn speciaal gebouwd om H.265/HEVC video moeiteloos te verwerken.</li>
+            <li><strong>Geen Audio-Sync Problemen:</strong> Doordat de videodecoder synchroon loopt met de geluidskaart, treedt er geen vertraging op tussen beeld en geluid.</li>
+            <li><strong>Snellere Zaptijden:</strong> De chip kan bij het zappen het nieuwe kanaal meteen verwerken.</li>
+          </ol>
+
+          <h2>Wanneer is Software Decoding (SW) een Redmiddel?</h2>
+          <p>Hoewel Hardware Decoding superieur is, zijn er situaties waarin **Software Decoding (SW)** uitkomst biedt:</p>
+          <ul>
+            <li><strong>Verouderde Hardware / Vreemd Videoformaat:</strong> Als je een heel oud videobestand afspeelt waarin de fysieke GPU de codec niet herkent, kan de CPU het via softwareberekeningen toch zichtbaar maken.</li>
+            <li><strong>Zwarte Scherm Oplossen:</strong> Krijg je wel geluid maar een zwart scherm op een specifieke tv-zender? Schakel tijdelijk over naar SW decoding.</li>
+          </ul>
+
+          <p>Lees voor uitgebreide analyses over videoplayers ook onze vergelijking <a href="exoplayer-vs-vlc.html" class="text-accent">ExoPlayer versus VLC Player voor IPTV</a>.</p>
+
+          <div style="background:rgba(232,25,44,0.08);border-left:4px solid #e8192c;padding:20px;margin:30px 0;border-radius:8px;">
+            <p style="margin:0;font-weight:600;">💡 Hoe stel je dit in op TiviMate of XCIPTV?</p>
+            <p style="margin:5px 0 0 0;">Ga in TiviMate naar <em>Settings ➔ Playback ➔ Decoder ➔ Video Decoder</em> en kies voor **Hardware**. In XCIPTV ga je naar <em>Player Settings</em> en selecteer je **ExoPlayer (HW)**. Bekijk onze handleidingen in <a href="tivimate-vs-iptv-smarters.html" class="text-accent">TiviMate vs IPTV Smarters</a> en <a href="xciptv-installeren.html" class="text-accent">XCIPTV installeren</a>.</p>
+          </div>
+
+          <h2>Relatie tussen Codecs, Bitrates &amp; Beeldkwaliteit</h2>
+          <p>Om te genieten van de hoogste videokwaliteit zonder haperingen moet het hele plaatje kloppen: de bronstream van <a href="index.html" class="text-accent">Diamond IPTV</a>, de hardware decoder van je tv en jouw tv-resolutie. Bekijk ons uitgebreide artikel <a href="iptv-beeldkwaliteit.html" class="text-accent">HD, Full HD, 4K en 8K IPTV: wat is het verschil?</a> voor een complete uitleg over bitrates en framerates.</p>
+
+          <div style="background:rgba(255,255,255,0.03);border-left:4px solid #10b981;padding:20px;margin:30px 0;border-radius:8px;">
+            <p style="margin:0;font-weight:600;">📌 Consumentenadvies Videocodecs:</p>
+            <p style="margin:5px 0 0 0;">Volgens open-source videoprojecten zoals <a href="https://www.videolan.org/" target="_blank" rel="noopener">VideoLAN VLC</a>, tech-beoordelingen op <a href="https://tweakers.net" target="_blank" rel="noopener">Tweakers.net</a> en consumententests van de <a href="https://www.consumentenbond.nl" target="_blank" rel="noopener">Consumentenbond</a> is hardware-versnelde H.265 decoding de standaard voor alle 4K videostreaming.</p>
+          </div>
+
+          <h2>Veelgestelde Vragen (FAQ)</h2>
+
+          <p><strong>Is HW+ beter dan standaard HW decoding?</strong></p>
+          <p>HW+ (Hardware Plus) is een geavanceerde modus in spelers zoals MX Player. Het combineert de snelheid van hardware-decoding met de flexibiliteit van softwarematige ondertiteling en audio-effecten. Schakel HW+ in als je speler dit ondersteunt!</p>
+
+          <p><strong>Waarom wordt mijn tv-stick heel heet tijdens het streamen?</strong></p>
+          <p>Als je tv-stick extreem heet wordt of zenders beginnen te haperen na een half uur kijken, staat de speler app hoogstwaarschijnlijk ingesteld op SW decoding. Schakel dit om naar Hardware Decoding om de CPU te ontlasten.</p>
+
+          <p><strong>Waar kan ik een stabiel 4K IPTV abonnement aanschaffen?</strong></p>
+          <p>Bij Diamond IPTV ontvang je direct jouw inloggegevens per e-mail. Bekijk ons complete zenderaanbod op onze <a href="iptv-kopen.html" class="text-accent">IPTV Kopen pagina</a>.</p>
+
+          <h2>Conclusie: Kies altijd voor Hardware Versnelling</h2>
+          <p>Het op de juiste manier instellen van **hardware decoding** zorgt voor lagere CPU-belasting, bliksemsnelle zapsnelheden en vloeiende 4K 60FPS uitzendingen.</p>
+
+          <p>Klaar om jouw mediaspeler te voorzien van het grootste en meest stabiele zenderaanbod van Nederland en België? Bekijk onze pakketten op <a href="iptv-kopen.html" class="text-accent">IPTV Kopen bij Diamond IPTV</a> of bekijk de stapsgewijze <a href="installatie.html" class="text-accent">Installatie Handleiding</a>.</p>
+          <p><a href="iptv-kopen.html" class="btn btn--primary">Bekijk Diamond IPTV Pakketten</a> <a href="contact.html" class="btn btn--outline" style="margin-left:10px;">Stel een Vraag aan Support</a></p>
+        </article>
+      </div>
+
+      <aside class="article-layout__sidebar reveal reveal-right">
+        <!-- Sidebar Card 1 -->
+        <div class="sidebar-widget card card--glass">
+          <h3 class="sidebar-widget__title">Over Diamond IPTV</h3>
+          <p class="text-muted text-sm mb-md">Diamond IPTV is dé toonaangevende IPTV-aanbieder in Nederland. Wij leveren een premium service met ongeëvenaarde stabiliteit, haarscherpe 4K kwaliteit en 24/7 ondersteuning. Sluit je aan bij duizenden tevreden klanten!</p>
+          <a href="index.html" class="text-accent font-bold">Lees meer over ons &rarr;</a>
+        </div>
+
+        <!-- Sidebar Card 2 -->
+        <div class="sidebar-widget card card--glass mt-lg">
+          <h3 class="sidebar-widget__title">Populaire Artikelen</h3>
+          <ul class="sidebar-list">
+            <li>
+              <a href="router-instellingen-iptv.html" class="sidebar-list__link">
+                <span class="sidebar-list__text">Routerinstellingen voor IPTV</span>
+              </a>
+            </li>
+            <li>
+              <a href="exoplayer-vs-vlc.html" class="sidebar-list__link">
+                <span class="sidebar-list__text">ExoPlayer vs VLC Player</span>
+              </a>
+            </li>
+            <li>
+              <a href="iptv-beeldkwaliteit.html" class="sidebar-list__link">
+                <span class="sidebar-list__text">HD, 4K &amp; 8K Beeldkwaliteit</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sidebar CTA -->
+        <div class="sidebar-widget card card--accent mt-lg text-center">
+          <h3 class="sidebar-widget__title">Probeer Diamond IPTV</h3>
+          <p class="mb-md text-sm">Krijg direct toegang tot 24.000+ zenders en 100.000+ VODs.</p>
+          <a href="iptv-kopen.html" class="btn btn--primary btn--block">IPTV Kopen</a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Related Posts -->
+    <section class="section section--alt border-top">
+      <div class="container">
+        <h2 class="text-center mb-xl">Gerelateerde Artikelen</h2>
+        <div class="grid grid-3">
+          <article class="card card--glass blog-card">
+            <a href="router-instellingen-iptv.html" class="blog-card__image" style="background:#000;">
+              <img src="images/blog-router-instellingen-iptv.webp" alt="Routerinstellingen voor IPTV-streaming" width="400" height="225" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
+            </a>
+            <div class="blog-card__content">
+              <span class="badge badge--accent blog-card__badge">Netwerk &amp; Wifi</span>
+              <h3 class="blog-card__title"><a href="router-instellingen-iptv.html">Routerinstellingen voor IPTV</a></h3>
+              <p class="blog-card__date text-muted text-sm">2 September 2026</p>
+            </div>
+          </article>
+          <article class="card card--glass blog-card">
+            <a href="exoplayer-vs-vlc.html" class="blog-card__image" style="background:#000;">
+              <img src="images/blog-exoplayer-vs-vlc.webp" alt="ExoPlayer vs VLC Player" width="400" height="225" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
+            </a>
+            <div class="blog-card__content">
+              <span class="badge badge--accent blog-card__badge">Videospelers</span>
+              <h3 class="blog-card__title"><a href="exoplayer-vs-vlc.html">ExoPlayer vs VLC Player</a></h3>
+              <p class="blog-card__date text-muted text-sm">4 Augustus 2026</p>
+            </div>
+          </article>
+          <article class="card card--glass blog-card">
+            <a href="iptv-beeldkwaliteit.html" class="blog-card__image" style="background:#000;">
+              <img src="images/blog-iptv-beeldkwaliteit.webp" alt="HD, Full HD, 4K en 8K IPTV beeldkwaliteit" width="400" height="225" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
+            </a>
+            <div class="blog-card__content">
+              <span class="badge badge--accent blog-card__badge">Beeldkwaliteit</span>
+              <h3 class="blog-card__title"><a href="iptv-beeldkwaliteit.html">HD, 4K &amp; 8K Beeldkwaliteit</a></h3>
+              <p class="blog-card__date text-muted text-sm">31 Augustus 2026</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <div class="footer__main">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__brand-logo">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+            <path d="M20 2L37 14V28L20 38L3 28V14L20 2Z" fill="#e8192c" opacity="0.9"/>
+            <path d="M20 6L33 15V27L20 34L7 27V15L20 6Z" fill="#0a0e17"/>
+            <path d="M20 10L28 15.5V24.5L20 30L12 24.5V15.5L20 10Z" fill="#e8192c" opacity="0.6"/>
+            <path d="M20 14L24 16.5V21.5L20 24L16 21.5V16.5L20 14Z" fill="#e8192c"/>
+          </svg>
+          <span>DIAMOND <strong>IPTV</strong></span>
+        </a>
+        <p>Diamond IPTV biedt de beste IPTV ervaring in Nederland met meer dan 24.000 live zenders, 100.000+ VOD content en 4K/8K kwaliteit.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Snelle Links</h4>
+        <div class="footer__col-links">
+          <a href="index.html" class="footer__col-link">Home</a>
+          <a href="iptv-kopen.html" class="footer__col-link">IPTV Kopen</a>
+          <a href="installatie.html" class="footer__col-link">Installatie</a>
+          <a href="blog.html" class="footer__col-link">Blog</a>
+          <a href="contact.html" class="footer__col-link">Contact</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Gidsen &amp; Artikelen</h4>
+        <div class="footer__col-links">
+          <a href="hardware-decoding-iptv.html" class="footer__col-link">Hardware Decoding IPTV</a>
+          <a href="router-instellingen-iptv.html" class="footer__col-link">Routerinstellingen IPTV</a>
+          <a href="exoplayer-vs-vlc.html" class="footer__col-link">ExoPlayer vs VLC Player</a>
+          <a href="wat-is-iptv.html" class="footer__col-link">Wat is IPTV?</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Informatie</h4>
+        <div class="footer__col-links">
+          <a href="#" class="footer__col-link">Over Ons</a>
+          <a href="#" class="footer__col-link">Privacybeleid</a>
+          <a href="#" class="footer__col-link">Algemene Voorwaarden</a>
+          <a href="#" class="footer__col-link">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Betaalmethoden</h4>
+        <div class="footer__payment">
+          <div class="footer__payment-card" title="iDEAL"><span class="ideal-logo">iDEAL</span></div>
+          <div class="footer__payment-card" title="Visa"><i class="fa-brands fa-cc-visa"></i></div>
+          <div class="footer__payment-card" title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></div>
+          <div class="footer__payment-card" title="PayPal"><i class="fa-brands fa-cc-paypal"></i></div>
+          <div class="footer__payment-card" title="Apple Pay"><i class="fa-brands fa-cc-apple-pay"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p class="footer__copyright">&copy; 2026 Diamond IPTV. Alle rechten voorbehouden.</p>
+      <div class="footer__bottom-links">
+        <a href="#" class="footer__bottom-link">Privacybeleid</a>
+        <a href="#" class="footer__bottom-link">Algemene Voorwaarden</a>
+        <a href="#" class="footer__bottom-link">Cookiebeleid</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/cms-engine.js?v=1.3" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
